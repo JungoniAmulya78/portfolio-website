@@ -1,0 +1,320 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+/* Sections (reduced gaps) */
+section {
+  padding: 40px 20px;   /* reduced from 60px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;  /* reduced from 30px */
+  color: #111;
+}
+
+/* Hero Section */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;   /* tighter gap */
+}
+
+.hero-left {
+  max-width: 480px;
+}
+
+.hero-left h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-left p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.hero-right img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0073e6;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skills-list span {
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Cards (Education, Projects, Experience) */
+.project-card, .edu-item, .exp-item {
+  background: #f9f9f9;
+  padding: 15px;           /* reduced padding */
+  margin: 10px 0;          /* reduced margin */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: #0073e6;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.project-card a:hover {
+  background: #005bb5;
+}
+
+/* Achievements */
+#achievements ul {
+  list-style-type: disc;
+  padding-left: 18px;
+  text-align: left;
+}
+
+/* Contact Section */
+#contact .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #0073e6;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#contact .btn:hover {
+  background: #005bb5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-right img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 1.8rem;
+  }
+  .hero-left p {
+    font-size: 0.95rem;
+  }
+  .hero-right img {
+    width: 140px;
+    height: 140px;
+  }
+}
+/* Sections (base style) */
+section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Different Backgrounds for Each Section */
+#about {
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff);  /* light blue gradient */
+}
+
+#education {
+  background: #fafafa;  /* very light grey */
+}
+
+#skills {
+  background: linear-gradient(135deg, #fff5f7, #ffe6eb);  /* soft pink gradient */
+}
+
+#projects {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);  /* subtle grey gradient */
+}
+
+#experience {
+  background: #f7fdf7;  /* very light green */
+}
+
+#achievements {
+  background: linear-gradient(135deg, #fffbe6, #fff7cc);  /* light yellow */
+}
+
+#contact {
+  background: linear-gradient(135deg, #e6f0ff, #d9e6ff);  /* light blue lavender */
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+/* Sections - reduced spacing + separator lines */
+section {
+  padding: 25px 20px;        /* compact padding */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-top: 1px solid #ddd; /* thin separator line */
+}
+
+/* Remove top border from the first section */
+section:first-of-type {
+  border-top: none;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Cards (Education, Projects, Experience) - compact */
+.project-card, .edu-item, .exp-item {
+  background: #f9f9f9;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* Skills list compact */
+.skills-list {
+  gap: 6px;
+}
+
+.skills-list span {
+  padding: 5px 10px;
+  font-size: 0.85rem;
+}
+/* Sections - compact with distinct backgrounds */
+#about {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);   /* bright light blue */
+}
+
+#education {
+  background: #fef9e7;  /* soft yellow */
+}
+
+#skills {
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);   /* bright pink gradient */
+}
+
+#projects {
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7);   /* purple gradient */
+}
+
+#experience {
+  background: #e8f5e9;  /* light green */
+}
+
+#achievements {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);   /* orange-peach gradient */
+}
+
+#contact {
+  background: linear-gradient(135deg, #e8eaf6, #c5cae9);   /* lavender-blue gradient */
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #0073e6;     /* bright blue heading color */
+  text-transform: uppercase;  /* ALL CAPS */
+  font-weight: bold;
+  letter-spacing: 1px; /* spacing for professional look */
+}
